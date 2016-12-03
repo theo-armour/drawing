@@ -1,2 +1,2 @@
 # drawing
-Drawing simple things in simple ways until they are prefected
+Drawing simple things in simple ways until they are perfected
