@@ -197,9 +197,12 @@
 
 			file1.focus();
 
-		} else if ( txt.includes( 'TOOgallery') ) {
+		} else if ( txt.includes( 'toogallery') ) {
 
-			createPageOfImages( OO.urlGHPages + p , filesText )
+
+console.log( '23', keys  );
+
+			createPageOfImages( TOO.urlGHPages + p , keys );
 
 		} else {
 
@@ -330,20 +333,20 @@
 
 	function createPageOfImages( path, photos ) {
 
-		var page, item, item2, fileName;
+//		var page, item, item2, fileName;
 
 		page = '';
 
 		for ( var i = 0; i < photos.length; i++ ) {
 
 			item = photos[ i ];
-			item2 = item.split( '/' )
+//			item2 = item.split( '/' )
 
-			fileName = item2.pop();
-			fileName = fileName.replace( /[-_]/g, ' ' );
-
+//			fileName = item2.pop();
+			fileName = item.replace( /[-_]/g, ' ' );
+console.log( 'item', item );
 			page += '<div style=display:inline-block;margin:10px; >' +
-				'<a href=JavaScript:getFileSetContents("' + path + item +'"); ><img src=' + TOO.urlGHPages + path + item + ' height=200; title="' + fileName.slice( 0, -4 ) + '" ></a>' +
+				'<a href=JavaScript:getFileSetContents("' + path + item +'"); ><img src=' + path + encodeURI( item ) + ' height=200; title="' + fileName.slice( 0, -4 ) + '" ></a>' +
 				'</div>';
 
 		}
