@@ -275,7 +275,7 @@
 
 		contents.innerHTML =
 			'<img id=image src="' + url +
-			'" style="border:2px solid gray; margin: 25px 0 0 50px;" >';
+			'" style="border:2px solid gray; margin: 25px 0 0 50px; max-width: 800px; " >';
 
 		menuFileData.innerHTML =
 			'URL: ' + url.slice( 8 ).link( url ) + b +
