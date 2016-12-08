@@ -131,8 +131,6 @@
 
 			}
 
-
-
 		}
 
 		TOO.menu.innerHTML = foldersText + filesText;
@@ -141,7 +139,7 @@
 
 		setDefaultContents( path, filesText );
 
-		if ( p !== '' ) { file0.focus(); }
+//		if ( p !== '' ) { file0.focus(); }
 
 	}
 
@@ -206,11 +204,11 @@ console.log( '23', keys  );
 
 		} else {
 
-			contents.innerHTML = '<h2 style="margin:200px 0 0 50px;" > Select a file to view from the menu </h2>';
+			if ( p !== '' ) { file0.focus(); }
+
+//			contents.innerHTML = '<h2 style="margin:200px 0 0 50px;" > Select a file to view from the menu </h2>';
 
 		}
-
-
 
 	}
 
@@ -345,6 +343,7 @@ console.log( '23', keys  );
 //			fileName = item2.pop();
 			fileName = item.replace( /[-_]/g, ' ' );
 console.log( 'item', item );
+
 			page += '<div style=display:inline-block;margin:10px; >' +
 				'<a href=JavaScript:getFileSetContents("' + path + item +'"); ><img src=' + path + encodeURI( item ) + ' height=200; title="' + fileName.slice( 0, -4 ) + '" ></a>' +
 				'</div>';
